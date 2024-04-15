@@ -4,7 +4,7 @@
 
 - Sends structured messages to Microsoft Teams using Adaptive Cards.
 - Dynamically populates message content based on the incoming HTTP request from the NMM Custom API Notification
-- Handles requests with no account ID by defaulting to 'System'.
+- Handles requests with no account ID by defaulting to 'Global'.
 
 ## Requirements
 

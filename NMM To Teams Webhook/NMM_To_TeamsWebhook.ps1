@@ -8,7 +8,7 @@ function Send-TeamsMessage {
         [string]$WebhookUrl
     )
     if ($null -eq $Request.AccountId) {
-        $AccountID = 'System'
+        $AccountID = 'Global'
     }
     else {
         $AccountID = $Request.AccountId
