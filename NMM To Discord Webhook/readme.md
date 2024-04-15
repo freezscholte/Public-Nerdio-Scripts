@@ -17,3 +17,5 @@
 
 1. **Set Up Webhook URL:**
    - Replace `DISCORD_WEBHOOK_URL` with your Discord webhook URL in the script.
+
+![CleanShot 2024-04-15 at 16 13 14@2x](https://github.com/freezscholte/Public-Nerdio-Scripts/assets/52416805/97e7df19-f969-4ee4-b866-65410f23b735)
