@@ -18,3 +18,5 @@
 
 2. **Create HTTP Trigger type function in a Azure FunctionApp:**
    - Follow these basisc steps to create a HTTP Trigger FunctionApp -> https://dev.to/henriettatkr/how-to-create-and-test-an-http-triggered-function-with-azure-function-app-4ffd
+
+![CleanShot 2024-04-15 at 14 13 56](https://github.com/freezscholte/Public-Nerdio-Scripts/assets/52416805/6e963455-4dd9-4fe5-9a4e-efd289295b01)
