@@ -87,10 +87,15 @@ function Send-TeamsMessage {
     return $response
 }
 
-# Webhook URL for your Teams channel
-$webhookUrl = "TEAMS_WEBHOOK_URL"
-# Send the message to Teams
-Send-TeamsMessage -Request $Request.body -WebhookUrl $webhookUrl
+try {
+    # Webhook URL for your Teams channel
+    $webhookUrl = "TEAMS_WEBHOOK_URL"
+    # Send the message to Teams
+    Send-TeamsMessage -Request $Request.body -WebhookUrl $webhookUrl
+}
+catch {
+    $_.Exception.Message
+}
 
 # Return response
 Push-OutputBinding -Name Response -Value ([HttpResponseContext]@{

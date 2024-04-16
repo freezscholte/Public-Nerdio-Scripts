@@ -26,7 +26,7 @@ function Send-DiscordMessage {
     $DiscordEmbed = [PSCustomObject]@{
         title       = "NMM Notification"
         description = "Details of Job ID: $($Request.Job.Id)"
-        color       = if ($Request.Job.JobStatus -eq 'Failed'){0xFF0000}else{0x13BA7C}
+        color       = if ($Request.Job.JobStatus -eq 'Failed') { 0xFF0000 }else { 0x13BA7C }
         fields      = $Fields
         timestamp   = $Request.Job.CreationDateUtc
     }
@@ -53,10 +53,16 @@ function Send-DiscordMessage {
 
 }
 
-# Webhook URL for your Teams channel
-$webhookUrl = "DISCORD_WEBHOOK_URL"
-# Send the message to Teams
-Send-DiscordMessage -Request $Request.body -WebhookUrl $webhookUrl
+try {
+    # Webhook URL for your Teams channel
+    $webhookUrl = "DISCORD_WEBHOOK_URL"
+    # Send the message to Teams
+    Send-DiscordMessage -Request $Request.body -WebhookUrl $webhookUrl
+}
+catch {
+    $_.Exception.Message
+}
+
 
 # Return response
 Push-OutputBinding -Name Response -Value ([HttpResponseContext]@{
